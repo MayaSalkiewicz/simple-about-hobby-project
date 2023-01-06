@@ -45,18 +45,36 @@
       }
 
       img {
-        max-width: 500px;
+        max-width: 800px;
         display: block;
         margin: 0 auto;
       }
 
       .main-picture {
-        margin: 40px auto;
-        transition: transform 150ms ease-in-out;
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 15px;
+        transition: transform 1000ms ease-in-out;
       }
 
       .main-picture:hover {
         transform: scale(1.5);
+      }
+
+      .picture-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+
+      .picture-grid img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 1000ms ease-in-out;
+      }
+
+      .picture-grid img:hover {
+        transform: scale(2);
       }
 
       p {
@@ -102,21 +120,23 @@
       <h2>Why do we feel amazing after each session???</h2>
       <img
         class="main-picture"
-        src="https://cdn.pixabay.com/photo/2016/11/05/20/07/woman-1801281_1280.png"
+        src="https://cdn.pixabay.com/photo/2017/11/18/05/05/yoga-2959233_1280.jpg"
         alt="yoga-sign"
       />
-      <img
-        src="https://cdn.pixabay.com/photo/2017/11/18/05/02/yoga-2959226_1280.jpg"
-        alt="yoga2"
-      />
-      <img
-        src="https://cdn.pixabay.com/photo/2017/11/18/05/00/yoga-2959214_1280.jpg"
-        alt="yoga3"
-      />
-      <img
-        src="https://cdn.pixabay.com/photo/2017/11/18/05/00/woman-2959213_1280.jpg"
-        alt="yoga4"
-      />
+      <div class="picture-grid">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/11/18/05/02/yoga-2959226_1280.jpg"
+          alt="yoga2"
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2017/11/18/05/00/yoga-2959214_1280.jpg"
+          alt="yoga3"
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2017/11/18/05/00/woman-2959213_1280.jpg"
+          alt="yoga4"
+        />
+      </div>
       <p>
         Yoga is so much more than just a powerful way to relax, it is a complete
         workout for both the body and the mind and has the potential to increase
