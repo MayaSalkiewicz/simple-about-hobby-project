@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yoga is Life 🧘‍♀️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
+        font-family: "Source Serif Pro", serif;
         background: linear-gradient(
           179.4deg,
           rgb(253, 240, 233) 2.2%,
           rgb(255, 194, 203) 96.2%
         );
+        margin-top: 30px;
       }
       .theme-button {
         display: block;
         font-size: 18px;
-        margin: 10px auto;
+        margin: 30px auto;
         padding: 15px 30px;
         background-color: rgb(254, 193, 202);
         border: 1px solid white;
@@ -41,7 +49,15 @@
 
       h1,
       h2 {
+        letter-spacing: 2px;
         text-align: center;
+        opacity: 0.6;
+      }
+      h1 {
+        font-size: 45px;
+      }
+      h2 {
+        margin-bottom: 40px;
       }
 
       img {
@@ -90,9 +106,13 @@
         background-color: rgb(254, 216, 218);
         border: 1px solid white;
         border-radius: 10px;
-        color: white;
         cursor: pointer;
         transition: background-color 0.3s;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
       }
 
       .check-button:hover {
@@ -111,10 +131,36 @@
       .github-link:hover {
         color: rgb(252, 239, 232);
       }
+
+      .dark {
+        background: linear-gradient(to top, #09203f 0%, #537895 100%);
+      }
+
+      .dark .container {
+        background: rgb(28, 63, 90);
+        box-shadow: 0 1px 16px 0;
+        color: white;
+      }
+
+      .dark .theme-button {
+        background-color: rgb(22, 46, 77);
+      }
+
+      .dark .theme-button:hover {
+        background-color: rgb(54, 86, 115);
+      }
+
+      .dark .check-button {
+        background-color: rgb(80, 117, 146);
+      }
+
+      .dark .check-button:hover {
+        background-color: rgb(41, 71, 100);
+      }
     </style>
   </head>
   <body>
-    <button class="theme-button">Dark Theme</button>
+    <button class="theme-button">Change Theme</button>
     <div class="container">
       <h1>YOGA</h1>
       <h2>Why do we feel amazing after each session???</h2>
@@ -143,12 +189,25 @@
         fat loss, develop muscle tone, and build flexibility, leading to a more
         toned lean-looking physique.
       </p>
-      <button class="check-button">Practice Yoga</button>
+      <button class="check-button">
+        <a href="https://www.youtube.com/@yogawithadriene">Practice Yoga</a>
+      </button>
     </div>
     <footer>
       <p>
         Coded with ❤️ by <a href="/" class="github-link">Maya Salkiewicz</a>
       </p>
     </footer>
+    <script>
+      let button = document.querySelector(".theme-button");
+
+      let changeTheme = () => {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+      };
+
+      button.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
